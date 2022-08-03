@@ -7,3 +7,11 @@ for (let i = 0; i < 16; i++) {
     div.id = i + 1;
     container.appendChild(div);
 }
+
+const grid = document.querySelectorAll('div#container div');
+console.log(grid);
+
+grid.forEach(box => box.addEventListener('mouseenter', function(e) {
+    console.log(e.target);
+    this.classList.add('trail');
+}));

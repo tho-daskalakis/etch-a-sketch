@@ -6,12 +6,16 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 5px;
+    gap: 0px;
     max-height: 80vh;
     max-width: 80vh;
+    margin: auto;
 }
 
 #container div {
-    background-color: blue;
     aspect-ratio: 1;
+}
+
+.trail {
+    background-color: blue;
 }
