@@ -14,4 +14,4 @@ console.log(grid);
 grid.forEach(box => box.addEventListener('mouseenter', function(e) {
     console.log(e.target);
     this.classList.add('trail');
-}));
+}, {once: true}));
