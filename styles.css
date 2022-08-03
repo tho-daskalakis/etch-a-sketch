@@ -8,6 +8,7 @@ body {
     max-height: 80vh;
     max-width: 80vh;
     margin: auto;
+    border: solid 2px black;
 }
 
 #container div {
