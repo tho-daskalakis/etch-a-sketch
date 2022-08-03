@@ -24,7 +24,12 @@ const btn = document.querySelector('#btn');
 btn.addEventListener('click', function(e) {
     let dim = prompt("Please enter the dimension for the new grid (1-100).");
     if (dim > 100) alert("Please input a value less than 100.");
-    if (dim < 1) alert("Cannot have non-positive values.");
+    if (dim < 1 && 
+        typeof dim == 'number') alert("Cannot have non-positive values.");
+    if (dim == "") {
+        setGridSize();
+        return;
+    }
 
     const children = container.querySelectorAll('div');
     children.forEach(child => container.removeChild(child));
