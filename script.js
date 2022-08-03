@@ -11,7 +11,9 @@ for (let i = 0; i < 16; i++) {
 const grid = document.querySelectorAll('div#container div');
 console.log(grid);
 
-grid.forEach(box => box.addEventListener('mouseenter', function(e) {
+grid.forEach(box => box.addEventListener('mouseenter', trail, {once: true}));
+
+function trail(e) {
     console.log(e.target);
     this.classList.add('trail');
-}, {once: true}));
+}
